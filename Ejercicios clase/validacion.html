@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Test de validación</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script type=‘text/javascript’>
+            function esNumerico(elem, mensaje)
+            {
+                var expresionNumerica = /^[0-9]+$/;
+                if(elem.value.match(expresionNumerica))
+                    return true;
+                else
+                {
+                    alert(mensaje);
+                    elem.focus();
+                    return false;
+                }
+            }
+            </script>
+            <form>
+                Números: <input type=‘text’ id=‘numeros’/>
+                <input type=‘button’
+                onclick=“esNumerico(document.getElementById(‘numeros’).value, ‘Por favor, inserta solamente números’)” value=‘Validar’ />
+            </form>
+    </body>
+</html>    
